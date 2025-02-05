@@ -1,0 +1,29 @@
+.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Merger</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <h2>Array Merger Application</h2>
+    <form>
+        <div class="array-input">
+            <label>Enter value in First Array:</label>
+            <input type="text" id="inputArray1" placeholder="Enter number">
+            <input type="button" value="Add Value" onclick="addArray1()">
+        </div>
+        <div class="array-input">
+            <label>Enter value in Second Array:</label>
+            <input type="text" id="inputArray2" placeholder="Enter number">
+            <input type="button" value="Add Value" onclick="addArray2()">
+        </div>
+        <div style="text-align: center;">
+            <input type="button" value="Merge Arrays" onclick="MergeArray()">
+        </div>
+    </form>
+    <div id="result"></div>
+</body>
+</html>
