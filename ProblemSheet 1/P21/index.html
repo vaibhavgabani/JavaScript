@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+    <style>
+        th,td
+        {
+            border:1px solid;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <p> Enter Name : <input type="text" id="p1"></p>
+        <p> Enter Age : <input type="number" id="p2"></p>
+        <p> Enter City : <input type="text" id="p3"><br/></p>
+
+        <input type="button" value="Add Row" onclick="addRow()" /><br/><br/>
+    </form>
+  
+    <br>
+    <table id="myTable">
+        <tbody>
+            <tr>
+                <th> Name </th>
+                <th> Age </th>
+                <th> City </th>
+            </tr>
+            
+            <tr>
+                <td> Abc </td>
+                <td> 18 </td>
+                <td> Surat </td>
+            </tr>
+  
+            <tr>
+                <td> Def </td>
+                <td> 20 </td>
+                <td> Vadodara </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

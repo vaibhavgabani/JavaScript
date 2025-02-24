@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function reverce(){
+            let str = parseInt(document.getElementById("p1").value);
+            console.log("Enterd value : "+str);
+        
+            let reverce = 0 , tmp = 0;
+            while(str>1){
+                tmp = parseInt(str) % 10;
+                reverce = reverce * 10 + tmp;
+                str = parseInt(str) / 10;
+            }
+            console.log("Reverce ans : " + reverce);            
+            document.getElementById("print").innerHTML = "Anser is : " +  reverce;
+        }
+
+    </script>
+</head>
+<body>
+    <form>
+        <p>Enter here : <input type="text" name="" id="p1"></p>
+        <input type="button" value="reverce" onclick="reverce()">
+    </form>
+    <div id="print"></div>
+</body>
+</html>

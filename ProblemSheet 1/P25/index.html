@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <form name="form1">
+        <h2> Registration Form </h2>
+
+        <p>Name : <input type="text" id="name"></p>
+
+        <p>Email Id : <input type="text"  id="email"></p>
+
+        <p>Age : <input type="number" id="age"></p>
+
+        <p>Gender :
+        <input type="radio"  name="gender" value="Male">Male
+        <input type="radio" name="gender"value="Female">Female
+        </p>
+ 
+        <p> Course : 
+        <select id="course" name="course">
+            <option value="Select Course"> Select Course </option>
+            <option value="Javascript"> Javascript </option>
+            <option value="Data Structure"> Data Structure </option>
+            <option value="HTML"> HTML </option>
+            <option value="RDBMS"> RDBMS </option>
+            <option value="C++"> C++ </option>
+        </select></p>
+
+        <p for="hobbies">Hobbies : 
+        <input type="checkbox" name="hobby" value="Reading">Reading
+        <input type="checkbox" name="hobby" value="Singing">Singing
+        <input type="checkbox" name="hobby" value="Travelling">Travelling
+        </p>
+
+        <input type="button" value="Display" onclick="show_data()">
+
+    </form>
+
+    <br><br>
+    <div id="display"></div>
+</body>
+</html>
