@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm Clock</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Make sure the script is loaded before using the functions -->
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="master">
+        Hours<input type="number" id="inputHours" oninput="checkHr(this,document.getElementById('hours_check'))"><span id="hours_check" style="color: red;"></span>
+        Minitus<input type="number" id="inputMinitus" oninput="checkMin(this,document.getElementById('min_check'))"><span id="min_check" style="color: red;"></span>
+        Seconds<input type="number" id="inputSeconds" oninput="checkSecond(this, document.getElementById('seconds_check'))"><span id="seconds_check" style="color: red;"></span>
+        <input type="button" value="Start" onclick="startAlaram(this)">
+        <input type="button" value="Pause" onclick="pauseAlaram(this)">
+        <input type="button" value="Restart" onclick="RestartAlaram()">
+        
+    </div>
+</body>
+</html>

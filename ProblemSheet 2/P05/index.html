@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <h1>Calculator</h1>
+        <main class="calculator">
+            <div class="display">
+                <input type="text" id="result" disabled>
+            </div>
+            <div id="row1" class="row">
+                <input type="button" value="AC" class="special-btn" id="clear" onclick="clearAll(this)" style="width: calc(50% - 5px); border-radius: 50px;">
+                <input type="button" value="%" class="special-btn" id="percent" onclick="numsAndArithmetic(this)">
+                <input type="button" value="/" class="operator-btn" id="divide" onclick="numsAndArithmetic(this)">
+            </div>
+            <div id="row2" class="row">
+                <input type="button" value="7" class="number-btn" id="num7" onclick="numsAndArithmetic(this)">
+                <input type="button" value="8" class="number-btn" id="num8" onclick="numsAndArithmetic(this)">
+                <input type="button" value="9" class="number-btn" id="num9" onclick="numsAndArithmetic(this)">
+                <input type="button" value="*" class="operator-btn" id="multiply" onclick="numsAndArithmetic(this)">
+            </div>
+            <div id="row3" class="row">
+                <input type="button" value="4" class="number-btn" id="num4" onclick="numsAndArithmetic(this)">
+                <input type="button" value="5" class="number-btn" id="num5" onclick="numsAndArithmetic(this)">
+                <input type="button" value="6" class="number-btn" id="num6" onclick="numsAndArithmetic(this)">
+                <input type="button" value="-" class="operator-btn" id="subtract" onclick="numsAndArithmetic(this)">
+            </div>
+            <div id="row4" class="row">
+                <input type="button" value="1" class="number-btn" id="num1" onclick="numsAndArithmetic(this)">
+                <input type="button" value="2" class="number-btn" id="num2" onclick="numsAndArithmetic(this)">
+                <input type="button" value="3" class="number-btn" id="num3" onclick="numsAndArithmetic(this)">
+                <input type="button" value="+" class="operator-btn" id="add" onclick="numsAndArithmetic(this)">
+            </div>
+            <div id="row5" class="row">
+                <input type="button" value="0" class="number-btn zero-btn" id="num0" onclick="numsAndArithmetic(this)">
+                <input type="button" value="00" class="number-btn zero-btn" id="double-zero" onclick="numsAndArithmetic(this)">
+                <input type="button" value="." class="number-btn" id="decimal" onclick="numsAndArithmetic(this)">
+                <input type="button" value="=" class="equals-btn" id="equals" onclick="equals()">
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
