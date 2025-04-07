@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login with Cookie</title>
+</head>
+<body>
+
+    <h2>Login</h2>
+    <form onsubmit="saveUsername(); return false;">
+        <label>Username:</label>
+        <input type="text" id="username"><br><br>
+
+        <label>Password:</label>
+        <input type="password"><br><br>
+
+        <input type="checkbox" id="remember"> Remember my ID<br><br>
+
+        <button type="submit">Login</button>
+    </form>
+
+    <script>
+        // Save username to cookie if checkbox is checked
+        function saveUsername() {
+            let uname = document.getElementById("username").value;
+            let remember = document.getElementById("remember").checked;
+
+            if (remember) {
+                document.cookie = "username=" + uname + "; expires=Fri, 12 Apr 2025 12:00:00 UTC; path=/";
+            } else {
+                // if checkbox is unchecked, clear cookie
+                document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            }
+        }
+
+        // Fill username if cookie exists
+        function fillUsername() {
+            let cookies = document.cookie.split("; ");
+            for (let i = 0; i < cookies.length; i++) {
+                let parts = cookies[i].split("=");
+                if (parts[0] === "username") {
+                    document.getElementById("username").value = parts[1];
+                    document.getElementById("remember").checked = true;
+                }
+            }
+        }
+    </script>
+
+    <script>
+        fillUsername(); // load cookie value on page load
+    </script>
+
+</body>
+</html>

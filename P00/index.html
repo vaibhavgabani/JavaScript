@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+</head>
+<body onload="getcookie()">
+    <form onsubmit="return valid(event)">
+        <div>
+            Email:
+            <input type="text" name="" id="email" oninput="emailCheck(this,document.getElementById('emailMessage'))"><span id="emailMessage"></span>
+        </div>
+        <div>
+            Password:
+            <input type="text" name="" id="password" oninput="passwordCheck(this,document.getElementById('passwordMessage'))"><span id="passwordMessage"></span>
+        </div>
+        <div>
+            Select Product : 
+            <select name="" id="product" onchange="addType()">
+                <option value="Select One">Select One</option>
+                <option value="Tech">Tech</option>
+                <option value="Cloths">Cloths</option>
+            </select>
+            <span id="Pmessage"></span>
+        </div>
+        <div>
+            Select type : 
+            <select name="" id="type">
+                <option value="Select One">Select One</option>
+            </select>
+            <span id="Tmessage"></span>
+        </div>
+        <div>
+            Select Plan: 
+            <input type="checkbox" name="plan" value="500" id="basic"><label>Basic Plan(500)</label>
+            <input type="checkbox" name="plan" value="700" id="advance"><label>Advance Plan(700)</label>
+            <span id="planMessage"></span>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+    <label>Remember Me:</label><input type="checkbox" name="remember" id="remember">
+    <div id="sucess"></div>
+    <br>
+    <table border="1">
+        <tr>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Product</th>
+            <th>Type</th>
+            <th>Plan</th>
+            <th>Total</th>
+        </tr>
+    </table>
+    <pre id="js"></pre>
+    <!-- <div id="js"></div> -->
+</body>
+</html>

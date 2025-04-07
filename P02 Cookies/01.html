@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="getcookie()">
+    user Name
+    <input type="text" name="" id="usernamme">
+    <br>
+    user Password
+    <input type="text" name="" id="password">
+    <br>
+    check me: 
+    <input type="checkbox" name="" id="remember">
+    <br><br>
+    <!-- <input type="datetime-local" name="" id="Date"> -->
+    <input type="button" value="submit" onclick="setcookie()">
+    <pre id="JSON"></pre>
+    <script>
+        // function date(){
+        //     let d = document.getElementById("Date").value;
+        //     let exp = new Date(d);
+        //     console.log(exp.toUTCString());
+        // }
+        function setcookie(){
+            let name = document.getElementById("usernamme").value;
+            let password = document.getElementById("password").value;
+
+            if(document.getElementById("remember").checked){
+                let exp = "Fri, 18 Apr 2025 17:04:00 GMT";
+                document.cookie = `name=${name};expires=${exp};path/=`;
+                document.cookie = `password=${password};expires=${exp};path/=`;
+                storeInJson();
+            } else {
+                document.cookie = `name=;expires=;path/=`;
+                document.cookie = `password=;expires=;path/=`;
+            }
+        }
+        function getcookie(){
+            let cookies = document.cookie.trim().split(";");
+            // console.log(cookies);
+            for(let i = 0 ; i < cookies.length ; i++){
+                let tmp = cookies[i].trim().split("=");
+                console.log(tmp);
+                if(tmp[0] == "name"){
+                    console.log(tmp[1]);
+                    document.getElementById("usernamme").value = tmp[1];
+                } else if(tmp[0] == "password"){
+                    console.log(tmp[1]);
+                    document.getElementById("password").value = tmp[1];
+                }
+            }
+        }
+        var users = [];
+        function storeInJson(){
+           
+            let user = {
+                name : document.getElementById("usernamme").value,
+                password : document.getElementById("password").value
+            }
+
+            users.push(user);
+            
+            // show data
+            document.getElementById("JSON").innerHTML = JSON.stringify(users,null,2);
+        }
+    </script>
+</body>
+</html>

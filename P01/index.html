@@ -1,0 +1,54 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+ <body>
+    <form onclick="return valid(event)">
+        <div>Name : 
+            <input type="text" name="" id="name" oninput="validName(this,document.getElementById('NameMessage'))"><span id="NameMessage"></span>
+        </div>
+        <div>Phone Number : 
+            <input type="text" name="" id="number" oninput="validNumber(this,document.getElementById('NumberMessage'))"><span id="NumberMessage"></span>
+        </div>
+        <div>Email : 
+            <input type="text" name="" id="email" oninput="validEmail(this,document.getElementById('EmailMessage'))"><span id="EmailMessage"></span>
+        </div>
+        <div>Password : 
+            <input type="text" name="" id="password" oninput="validPassword(this,document.getElementById('PasswordMessage'))"><span id="PasswordMessage"></span>
+        </div>
+        <div>Select Countery: 
+            <select name="" id="Countery" onchange="validCountery()"> 
+                <option value="Select ONE">Select ONE</option>
+                <option value="INDIA">India</option>
+                <option value="USA">USA</option>
+            </select>
+            <span id="CounteryMessage"></span>
+        </div>
+        <div>Select city: 
+            <select name="" id="city">
+                <option value="Select ONE">Select ONE</option>
+            </select>
+            <span id="cityMessage"></span>
+        </div>
+        <label>remember me : </label>
+        <input type="checkbox" name="" id="remember">
+        <br>
+        <input type="submit" value="submit">
+    </form>
+    <div id="sucess"></div>
+    <br>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Number</th>
+            <th>Email</th>
+            <th>Password</th>
+        </tr>
+    </table>
+    <script src="script.js"></script>
+</head>
+ </body>
+ </html>

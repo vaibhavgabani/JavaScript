@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    user Name
+    <input type="text" name="" id="username">
+    <br>
+    Password
+    <input type="password" name="" id="password">
+    <br>
+    check me: 
+    <input type="checkbox" name="" id="remember">
+    <br><br>
+    <input type="button" value="submit" onclick="setSL()">
+    <script>
+        getSL();
+        function setSL(){
+            if(document.getElementById("remember").checked){
+                sessionStorage.setItem("username",document.getElementById("username").value);
+                sessionStorage.setItem("password",document.getElementById("password").value);
+            } else {
+                sessionStorage.clear();
+            }
+        }
+        function getSL(){
+            document.getElementById("username").value = sessionStorage.getItem("username");
+            document.getElementById("password").value = sessionStorage.getItem("password");
+        }
+    </script>
+</body>
+</html>

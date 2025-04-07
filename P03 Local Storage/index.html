@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    user Name
+    <input type="text" name="" id="username">
+    <br>
+    Password
+    <input type="password" name="" id="password">
+    <br>
+    check me: 
+    <input type="checkbox" name="" id="remember">
+    <br><br>
+    <input type="button" value="submit" onclick="setLS()">
+    <script>
+        getLS();
+        function setLS(){
+            if(document.getElementById("remember").checked){
+                localStorage.setItem("username",document.getElementById("username").value);
+                localStorage.setItem("password",document.getElementById("password").value);
+            } else {
+                localStorage.clear();
+            }
+        }
+
+        function getLS(){
+                let name = localStorage.getItem("username");
+                let password = localStorage.getItem("password");
+                console.log(`name is ${name} and password is : ${password}`);
+                document.getElementById("username").value = name;
+                document.getElementById("password").value = password;
+        }
+    </script>
+</body>
+</html>
